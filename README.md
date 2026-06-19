@@ -2,59 +2,14 @@
 
 > 25 个专业 Skill，覆盖用户体验管理全链路。兼容 **Claude Code** 和 **OpenAI Codex**，基于 [Agent Skills 开放标准](https://agentskills.io)。
 
-## 概览
+---
 
-本技能包为资深用户体验专家配备的 25 个可独立调用或组合使用的 Skill，覆盖从体验洞察、旅程分析到策略生成、测量统计的完整体验管理链路。
-
-### 能力域分布
-
-| 能力域 | 数量 | Skills |
-|--------|------|--------|
-| 体验洞察 | 6 | 场景识别、JTBD 提炼、认知心理分析、VOC 洞察、用户画像、同理心地图 |
-| 旅程分析 | 4 | 旅程还原、峰值设计、服务蓝图、员工诊断 |
-| 策略与设计 | 3 | 策略生成、场景化营销、体验编排 |
-| 测量与统计 | 5 | 指标设计、问卷设计、满意度统计、可用性测试、启发式评估 |
-| 评估与对标 | 2 | 竞品体验分析、触点审计 |
-| 分群与运营 | 1 | 用户分群与分层 |
-| 复盘与沉淀 | 2 | 服务复盘、资产沉淀 |
-| 商业价值 | 1 | 体验 ROI 分析 |
-| 工具包 | 1 | UX 工具包（HEART 模型、旅程地图模板等） |
-
-### 25 个 Skill 一览
-
-| # | Skill | 目录 | 核心能力 |
-|---|-------|------|---------|
-| 1 | 体验场景识别与还原 | `exp-scene-recognition` | 从碎片化信息还原体验现场，输出场景卡 |
-| 2 | JTBD 用户任务提炼 | `exp-jtbd-extraction` | 提炼功能/情绪/社会任务，输出 JTBD 卡片 |
-| 3 | 用户认知心理学分析 | `exp-cognitive-analysis` | 七维度认知检查，输出检查清单 |
-| 4 | 旅程还原与分析 | `exp-journey-analysis` | 定义尺度 → 还原实际 → 设计理想 → 差距分析 |
-| 5 | 峰值体验设计 | `exp-peak-design` | 设计安心/效率/被理解/专业/惊喜/结尾峰值 |
-| 6 | VOC 洞察分析 | `exp-voc-insight` | 分类 → 情绪评估 → 高频识别 → 深层需求挖掘 |
-| 7 | 场景化体验营销设计 | `exp-scenario-marketing` | 五类营销类型，输出场景化营销分析卡 |
-| 8 | 服务蓝图绘制 | `exp-service-blueprint` | 六层矩阵（用户行为 → 证据层），输出服务蓝图 |
-| 9 | 员工体验诊断 | `exp-employee-diagnosis` | 分析员工 JTBD 和支持度，评估传导机制 |
-| 10 | 体验指标体系设计 | `exp-metric-design` | 五类指标，定义计算方式和预警阈值 |
-| 11 | 体验策略生成 | `exp-strategy-generation` | 六维策略（产品/服务/运营/品牌/员工/Agent） |
-| 12 | 体验资产沉淀 | `exp-asset-accumulation` | 判断复用价值，选择资产类型，输出资产回写卡 |
-| 13 | 体验编排设计 | `exp-orchestration-design` | 设计触发条件 → 判断规则 → 响应动作 → 升级条件 |
-| 14 | 服务体验复盘 | `exp-service-review` | 系统复盘服务事件，输出改善策略和预警机制 |
-| 15 | 体验问卷设计 | `exp-survey-design` | 7 种量表类型，问卷结构七步编排，投放策略 |
-| 16 | 满意度统计与分析 | `exp-satisfaction-stats` | CSAT/NPS/CES 计算、行业基准、五象限诊断 |
-| 17 | 用户画像构建 | `exp-persona-building` | 基于数据构建结构化用户画像 |
-| 18 | 同理心地图 | `exp-empathy-map` | 理解用户内心世界（想/说/做/感四象限） |
-| 19 | 竞品体验分析 | `exp-competitive-analysis` | 从体验视角系统对比竞品 |
-| 20 | 可用性测试 | `exp-usability-testing` | 设计测试方案、编写脚本、分析指标 |
-| 21 | 启发式评估 | `exp-heuristic-evaluation` | 基于 Nielsen 十大原则快速评估可用性 |
-| 22 | 用户分群与分层 | `exp-user-segmentation` | 基于体验需求分群，设计差异化策略 |
-| 23 | 触点审计 | `exp-touchpoint-audit` | 全面盘点触点、评估质量、发现盲区 |
-| 24 | 体验 ROI 分析 | `exp-roi-analysis` | 量化体验投入的商业回报 |
-| 25 | UX 工具包 | `ux-toolkit` | HEART 模型、旅程地图模板、HCI 法则速查 |
-
-## 快速开始
-
-### 方式一：一键安装（推荐）
+## 📦 安装
 
 ```bash
+git clone https://github.com/guofu-shiqu/ux-expert-skills.git
+cd ux-expert-skills
+
 # Claude Code
 bash install/claude-code.sh
 
@@ -62,189 +17,386 @@ bash install/claude-code.sh
 bash install/codex.sh
 ```
 
-### 方式二：手动安装
+---
 
-#### Claude Code
+## 🚀 快速体验
+
+安装完成后，直接在 Claude Code 或 Codex 中描述你的问题，AI 会自动匹配并调用对应的 Skill。
+
+下面用 **4 个真实场景**演示效果。
+
+---
+
+### 示例 1：分析一条用户投诉（场景识别 + JTBD）
+
+**用户输入：**
+```
+帮我分析这条用户反馈：
+"你们这个 App 注册流程太复杂了，要填那么多信息，
+而且验证码等了 5 分钟都没收到，最后直接放弃了。"
+```
+
+**AI 自动调用 `exp-scene-recognition`，输出场景卡：**
+
+```
+📋 体验场景卡
+
+【场景类型】注册转化阻力场景
+【体验对象】新用户注册流程
+【触发条件】用户输入手机号 → 点击获取验证码 → 等待超时
+【用户目标】快速完成注册，开始使用产品核心功能
+【当前阻力】
+  ▪ 信息收集过多（认知负荷高）
+  ▪ 验证码延迟（等待焦虑 + 控制感丧失）
+  ▪ 无反馈状态提示（不确定性）
+【情绪状态】困惑 → 烦躁 → 放弃（脱离）
+【业务影响】注册转化率下降，获客成本浪费
+【体验机会】
+  ▪ 减少必填字段，支持第三方快捷注册
+  ▪ 验证码增加倒计时 + 重新发送入口
+  ▪ 增加"正在发送，预计 30 秒"的进度提示
+【指标观察】注册完成率、验证码发送成功率、放弃率
+【可复用规则】注册流程阻力检查清单
+```
+
+---
+
+### 示例 2：设计用户旅程（旅程分析 + 峰值设计）
+
+**用户输入：**
+```
+帮我分析电商 App 用户从浏览商品到收货评价的完整体验旅程，
+找出关键断点和峰值机会。
+```
+
+**AI 自动调用 `exp-journey-analysis`，输出旅程分析报告：**
+
+```
+🗺️ 用户体验旅程分析报告
+
+【旅程尺度】中型旅程（跨天，多触点）
+【边界】浏览商品 → 收货评价（不含复购）
+
+── 实际旅程（用户真实行为）──
+
+阶段 1：发现商品
+  用户行为：刷首页推荐 / 搜索关键词
+  触点：首页信息流、搜索结果页
+  情绪曲线：好奇 → 期待
+  痛点：推荐不准、搜索结果杂乱
+
+阶段 2：决策购买
+  用户行为：查看详情页、对比评价、加购、下单
+  触点：商品详情页、购物车、结算页
+  情绪曲线：期待 → 犹豫 → 决定
+  痛点：评价真假难辨、运费突增、优惠券规则复杂
+
+阶段 3：等待收货
+  用户行为：查看物流、等待送达
+  触点：订单详情页、物流推送
+  情绪曲线：期待 → 焦虑（尤其超时）
+  痛点：物流信息更新滞后、无预计送达时间
+
+阶段 4：收货体验
+  用户行为：开箱、试用、评价
+  触点：包裹、商品本身、评价页
+  情绪曲线：惊喜（或失望）→ 满足
+  痛点：包装破损、商品与描述不符
+
+── 理想旅程（设计目标）──
+
+阶段 2（决策购买）：增加"真实评价"标签 + 运费前置展示
+阶段 3（等待收货）：预计送达时间 + 物流异常主动预警
+阶段 4（收货体验）：开箱引导 + 评价激励
+
+── 关键断点 ──
+  ❌ 结算页突增运费（流失高峰）
+  ❌ 物流超时无预警（投诉高峰）
+
+── 峰值机会 ──
+  ⭐ 包裹开箱惊喜（峰值设计机会）
+  ⭐ 评价后获得积分（结尾峰值）
+```
+
+---
+
+### 示例 3：计算并解读 NPS（满意度统计）
+
+**用户输入：**
+```
+我有一份用户满意度调查数据：
+推荐者（9-10分）：120 人
+被动者（7-8分）：45 人
+贬损者（0-6分）：35 人
+总共 200 份有效样本，帮我分析一下。
+```
+
+**AI 自动调用 `exp-satisfaction-stats`，输出统计分析报告：**
+
+```
+📊 满意度统计分析报告
+
+【NPS 计算结果】
+  推荐者比例：120/200 = 60%
+  贬损者比例：35/200 = 17.5%
+  NPS = 60% - 17.5% = 42.5
+
+【解读】
+  NPS = 42.5，属于「良好」区间（50+ 优秀，30-50 良好，<0 危险）
+  你的 NPS 高于行业基准（电商平均约 35），表现不错。
+
+【象限诊断】
+              高满意度
+                 │
+        被动者   │  推荐者 ← 你在这里
+      （45人）   │  （120人）
+                 │
+  ──────────────┼────────── 高推荐意愿
+                 │
+      贬损者     │
+      （35人）   │
+                 │
+          低满意度
+
+【关键发现】
+  ▪ 推荐者占比 60%，说明核心体验已建立口碑基础
+  ▪ 但贬损者仍有 17.5%，需深挖原因（结合 VOC 分析）
+  ▪ 被动者 22.5% 是转化推荐者的关键人群
+
+【行动建议】
+  1. 对贬损者做深度访谈，找出共同痛点
+  2. 针对被动者设计"推荐激励机制"（如邀请有礼）
+  3. 追踪 NPS 趋势，建议每季度测量一次
+```
+
+---
+
+### 示例 4：全链路体验诊断（多 Skill 组合工作流）
+
+**用户输入：**
+```
+我们是一款在线教育 App，最近用户投诉增多，
+留存率下降。帮我做一次完整的体验诊断，
+给出改善策略。
+```
+
+**AI 按顺序调用多个 Skill，输出完整报告：**
+
+```
+🔍 体验诊断完整报告
+
+══ 第 1 步：场景识别（exp-scene-recognition）══
+识别到 3 类核心投诉场景：
+  S1 - 课程购买后无法退款（情绪：愤怒）
+  S2 - 视频卡顿、字幕不同步（情绪：烦躁）
+  S3 - 客服响应慢，问题 unresolved（情绪：失望）
+
+══ 第 2 步：JTBD 提炼（exp-jtbd-extraction）══
+用户真正想完成的任务：
+  【功能任务】学到能直接用的技能
+  【情绪任务】感受到"进步感"和"成就感"
+  【社会任务】获得可展示的学习成果（证书/作品）
+当前替代方案：B站免费教程、竞品 App
+当前阻力：价格高、效果不明确、学习孤独感
+
+══ 第 3 步：认知心理分析（exp-cognitive-analysis）══
+  认知负荷：课程目录层级过深，用户找不到续学入口 ❌
+  心智模型：用户期望"像 Netflix 一样续播"，实际需手动找 ❌
+  预期管理：购买前承诺"包教会"，实际难度不匹配 ❌
+  控制感：学习进度不可见，无成就感反馈 ❌
+
+══ 第 4 步：旅程分析（exp-journey-analysis）══
+关键断点：
+  断点 A：购买后首次打开 → 不知从哪开始（流失 23%）
+  断点 B：学习 3 天后 → 无提醒，遗忘（流失高峰）
+  断点 C：遇到问题 → 客服响应 > 2 小时（投诉源）
+
+══ 第 5 步：策略生成（exp-strategy-generation）══
+【产品维度】
+  ▪ 新增"继续学习"入口，记住上次播放位置
+  ▪ 增加学习进度可视化（连续学习 N 天徽章）
+【服务维度】
+  ▪ 客服响应 SLA 调整为 30 分钟内，超时自动升级
+  ▪ 增加"学习顾问"企微 1 对 1 跟进
+【运营维度】
+  ▪ 学习中断 2 天 → 推送"继续学习"提醒（含具体章节）
+  ▪ 完成课程 → 自动生成作品展示页，可分享朋友圈
+【指标验证】
+  核心指标：次日留存率、7 日留存率、NPS
+  目标：3 个月内次日留存从 35% → 50%
+
+══ 改善策略优先级 ══
+  P0（立即）：修复视频卡顿 + 客服响应 SLA
+  P1（本月）：新增续播入口 + 学习进度可视化
+  P2（下季度）：学习顾问 1 对 1 + 作品展示分享
+```
+
+---
+
+## 📖 所有 Skill 一览
+
+| # | Skill | 一句话说明 | 适合场景 |
+|---|-------|-----------|---------|
+| 1 | 体验场景识别与还原 | 从用户反馈/投诉中还原体验现场 | 收到用户反馈，不知道问题出在哪 |
+| 2 | JTBD 用户任务提炼 | 挖掘用户行为背后的真实动机 | 用户行为异常，或不知道用户真正想要什么 |
+| 3 | 用户认知心理学分析 | 从 7 个认知维度检查体验设计 | 用户"看不懂/找不到/记不住" |
+| 4 | 旅程还原与分析 | 还原实际旅程，对比理想旅程找断点 | 需要系统分析完整体验流程 |
+| 5 | 峰值体验设计 | 在关键触点设计让用户记住的瞬间 | 想打造品牌记忆点 |
+| 6 | VOC 洞察分析 | 批量分析用户原声，提炼洞察 | 有大量客服记录/评论需要分析 |
+| 7 | 场景化体验营销设计 | 在用户场景中设计转化触点 | 想提升转化或留存 |
+| 8 | 服务蓝图绘制 | 把前台后台全链路展开，找出协同问题 | 服务交付涉及多个部门 |
+| 9 | 员工体验诊断 | 分析员工体验问题如何影响客户体验 | 客户体验问题反复出现，疑似内部管理原因 |
+| 10 | 体验指标体系设计 | 设计可测量的体验指标 | 不知道用什么指标衡量体验 |
+| 11 | 体验策略生成 | 基于洞察生成六维改善策略 | 诊断完了，需要知道具体怎么做 |
+| 12 | 体验资产沉淀 | 把经验转化为可复用的资产 | 想建立团队的知识库 |
+| 13 | 体验编排设计 | 设计 Agent 自动识别和响应体验问题 | 想用 AI 自动化体验管理 |
+| 14 | 服务体验复盘 | 系统复盘服务事件 | 一次服务事故后需要复盘 |
+| 15 | 体验问卷设计 | 设计科学的体验测量问卷 | 要发问卷但不知道怎么设计 |
+| 16 | 满意度统计与分析 | 计算并解读 CSAT/NPS/CES | 有满意度数据需要分析 |
+| 17 | 用户画像构建 | 基于数据构建结构化用户画像 | 需要更懂你的用户 |
+| 18 | 同理心地图 | 理解用户的内心世界 | 需要建立团队对用户共情 |
+| 19 | 竞品体验分析 | 系统对比竞品的体验优劣 | 需要知道竞品做得比你好在哪 |
+| 20 | 可用性测试 | 设计或执行可用性测试 | 需要验证设计是否好用 |
+| 21 | 启发式评估 | 基于 Nielsen 十大原则快速评估 | 需要快速发现可用性问题 |
+| 22 | 用户分群与分层 | 基于体验需求对用户分群 | 想做差异化体验策略 |
+| 23 | 触点审计 | 全面盘点所有用户触点 | 不知道用户在哪些地方接触你的产品 |
+| 24 | 体验 ROI 分析 | 量化体验投入的商业回报 | 需要向管理层证明体验投入的价值 |
+| 25 | UX 工具包 | HEART 模型、HCI 法则速查 | 需要快速查阅 UX 方法论 |
+
+---
+
+## 🔗 推荐组合工作流
+
+### 工作流 1：体验诊断全流程
+```
+遇到问题 → 场景识别 → JTBD 提炼 → 认知分析
+→ 旅程分析 → 策略生成 → 指标验证
+```
+**适用**：从零开始诊断产品体验问题
+
+### 工作流 2：体验测量体系搭建
+```
+指标设计 → 问卷设计 → 满意度统计 → 可用性测试
+```
+**适用**：建立持续的体验监控体系
+
+### 工作流 3：服务体验优化
+```
+服务蓝图 → 员工诊断 → 峰值设计 → 服务复盘
+```
+**适用**：优化涉及多部门的服务体验
+
+### 工作流 4：用户增长（体验视角）
+```
+用户分群 → 场景化营销 → 编排设计 → ROI 分析
+```
+**适用**：用体验策略驱动增长
+
+---
+
+## ⚙️ 安装详解
+
+### Claude Code
 
 ```bash
-# 克隆仓库
-git clone https://github.com/guofu-shiqu/ux-expert-skills.git
+# 一键安装
+bash install/claude-code.sh
 
-# 将 skills 复制到 Claude Code 的 skills 目录
+# 或手动安装
+git clone https://github.com/guofu-shiqu/ux-expert-skills.git
 cp -r ux-expert-skills/skills/* ~/.claude/skills/
-
-# （可选）将 agent 提示词添加到项目的 CLAUDE.md
-cat ux-expert-skills/agent/ux-expert.md >> your-project/CLAUDE.md
 ```
 
-#### Codex
+安装后，在 Claude Code 中用 `/skill-name` 调用，或直接描述问题让 AI 自动匹配。
+
+### OpenAI Codex
 
 ```bash
-# 克隆仓库
+# 一键安装
+bash install/codex.sh
+
+# 或手动安装
 git clone https://github.com/guofu-shiqu/ux-expert-skills.git
-
-# 将 skills 复制到 Codex 的 skills 目录
 cp -r ux-expert-skills/skills/* ~/.agents/skills/
-
-# （可选）将 agent 提示词添加到项目的 AGENTS.md
-cat ux-expert-skills/agent/ux-expert.md >> your-project/AGENTS.md
 ```
 
-### 方式三：项目级安装（团队共享）
+安装后，在 Codex 中用 `$skill-name` 调用，或直接描述问题。
+
+### 项目级安装（团队共享）
 
 ```bash
-# 在项目根目录克隆
 git submodule add https://github.com/guofu-shiqu/ux-expert-skills.git .ux-expert
-
-# Claude Code: 创建符号链接
-ln -s .ux-expert/skills .claude/skills
-
-# Codex: 创建符号链接
-ln -s .ux-expert/skills .agents/skills
+ln -s .ux-expert/skills ~/.claude/skills/ux-expert   # Claude Code
+ln -s .ux-expert/skills ~/.agents/skills/ux-expert   # Codex
 ```
 
-## 使用方式
+---
 
-### 在 Claude Code 中
-
-```
-# 手动调用某个 skill
-/exp-scene-recognition 分析这条用户反馈
-
-# 或直接描述问题，Claude 会根据 description 自动匹配 skill
-帮我分析这个产品的用户旅程，找出体验断点
-```
-
-### 在 Codex 中
+## 📁 目录结构
 
 ```
-# 使用 $ 语法调用 skill
-$exp-journey-analysis 分析用户从注册到首次购买的完整旅程
-
-# 或直接描述问题，Codex 会自动匹配
-这批客服投诉录音，帮我做 VOC 洞察分析
+ux-expert-skills/
+├── README.md
+├── LICENSE
+├── AGENTS.md              # Codex agent 指令（可直接粘贴到项目）
+├── CLAUDE.md              # Claude Code 项目指令（可直接粘贴到项目）
+├── CHANGELOG.md
+├── agent/
+│   └── ux-expert.md       # 专家提示词（完整版）
+├── skills/                # 25 个 Skill
+│   ├── exp-scene-recognition/SKILL.md
+│   ├── exp-jtbd-extraction/SKILL.md
+│   ├── ...
+│   └── ux-toolkit/SKILL.md + references/
+├── install/
+│   ├── claude-code.sh
+│   ├── codex.sh
+│   └── uninstall.sh
+└── docs/
+    └── usage-guide.html   # 交互式使用说明书（浏览器打开）
 ```
 
-## 组合工作流
+---
 
-本技能包支持多 Skill 串联使用，以下是 6 条推荐工作流：
+## 📄 Skill 格式说明
 
-### 1. 体验诊断全流程
-```
-exp-scene-recognition → exp-jtbd-extraction → exp-cognitive-analysis
-→ exp-journey-analysis → exp-strategy-generation
-```
-**适用场景**：从零开始诊断一个产品的体验问题
-
-### 2. 体验测量闭环
-```
-exp-metric-design → exp-survey-design → exp-satisfaction-stats
-→ exp-heuristic-evaluation
-```
-**适用场景**：建立体验测量体系，持续监控体验质量
-
-### 3. 服务优化闭环
-```
-exp-service-blueprint → exp-employee-diagnosis → exp-peak-design
-→ exp-service-review
-```
-**适用场景**：优化服务交付流程，提升服务体验
-
-### 4. 增长与留存
-```
-exp-user-segmentation → exp-scenario-marketing → exp-orchestration-design
-→ exp-roi-analysis
-```
-**适用场景**：基于体验视角设计用户增长和留存策略
-
-### 5. 用户共情与创新
-```
-exp-empathy-map → exp-persona-building → exp-jtbd-extraction
-→ exp-peak-design
-```
-**适用场景**：深度理解用户，发现创新机会
-
-### 6. 质量审计与对标
-```
-exp-touchpoint-audit → exp-competitive-analysis → exp-heuristic-evaluation
-→ exp-metric-design
-```
-**适用场景**：全面审计体验质量，与竞品对标找差距
-
-## Skill 文件格式
-
-每个 Skill 遵循 [Agent Skills 开放标准](https://agentskills.io)：
-
-```
-skill-name/
-├── SKILL.md           # 必须：技能入口，包含 YAML frontmatter + 指令
-├── references/        # 可选：参考资料
-├── scripts/           # 可选：可执行脚本
-└── assets/            # 可选：模板、资源
-```
-
-`SKILL.md` 格式：
+每个 Skill 是一个目录，核心文件是 `SKILL.md`，格式遵循开放标准：
 
 ```markdown
 ---
 name: skill-name
-description: 简洁描述技能的功能和触发场景。Claude/Codex 据此判断何时自动调用。
+description: 描述技能功能和触发场景。AI 据此判断是否调用。
 ---
 
 # 技能标题
 
-指令内容...
+## 触发条件
+...
+
+## 核心能力
+...
+
+## 输出格式
+...
 ```
 
-## 技术规格
+AI 会根据 `description` 字段自动判断何时调用该 Skill，无需手动指定。
 
-- **标准**：[Agent Skills Open Standard](https://agentskills.io)
-- **兼容平台**：Claude Code、OpenAI Codex、WorkBuddy
-- **Skill 数量**：25
-- **语言**：中文（指令内容），英文（frontmatter description）
-- **许可证**：MIT
+---
 
-## 目录结构
+## 🤝 贡献
 
-```
-ux-expert-skills/
-├── README.md                    # 本文件
-├── LICENSE                      # MIT 许可证
-├── AGENTS.md                    # Codex agent 指令
-├── CLAUDE.md                    # Claude Code 项目指令
-├── CHANGELOG.md                 # 版本历史
-├── agent/
-│   └── ux-expert.md             # 专家 agent 提示词
-├── skills/                      # 25 个 Skill
-│   ├── exp-scene-recognition/
-│   │   └── SKILL.md
-│   ├── exp-jtbd-extraction/
-│   │   └── SKILL.md
-│   ├── ...
-│   └── ux-toolkit/
-│       ├── SKILL.md
-│       └── references/
-│           ├── hci-principles.md
-│           ├── heart-model.md
-│           ├── heuristic-evaluation.md
-│           ├── journey-map-template.md
-│           └── usability-test-script.md
-├── install/
-│   ├── claude-code.sh           # Claude Code 安装脚本
-│   ├── codex.sh                 # Codex 安装脚本
-│   └── uninstall.sh             # 卸载脚本
-└── docs/
-    └── usage-guide.html         # 交互式使用说明书
-```
+欢迎提交 Issue 或 Pull Request：
+- 报告 Skill 中的问题或改进建议
+- 贡献新的体验管理相关 Skill
+- 改进文档或使用说明书
 
 ## 许可证
 
-[MIT License](LICENSE) — 自由使用、修改、分发。
-
-## 贡献
-
-欢迎提交 Issue 或 Pull Request 贡献新的 Skill 或改进现有 Skill。
+[MIT License](LICENSE) — 自由使用、修改和分发。
 
 ## 作者
 
 **龙国富** — 资深用户体验专家，12 年+ 互联网与科技行业 UX 实战经验。
+
+> 如果你觉得这个技能包有用，欢迎 ⭐ Star 支持！
